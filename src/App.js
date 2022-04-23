@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
+import Card from "./Components/Card";
+
+const App = () => {
+  const books = [
+    {
+      id: 1,
+      img: "https://m.media-amazon.com/images/I/51MT0MbpD7L.jpg",
+      title: "The Subtle Art of Not Giving a F*ck",
+    },
+    {
+      id: 2,
+      img: "https://m.media-amazon.com/images/I/51DZeZw7K0L.jpg",
+      title: "Greenlights ",
+    },
+    {
+      id: 3,
+      img: "https://m.media-amazon.com/images/I/513Y5o-DYtL.jpg",
+      title: "Atomic Habits",
+    },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Card books={books} />
+    </>
   );
-}
+};
 
 export default App;
